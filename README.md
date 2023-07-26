@@ -26,13 +26,10 @@ In the query you need to put a date (in all formats: "YYYY-MM-DD", "YYYY/MM/DD",
 You can enter any date in query, but if you have the free version of 'News API' you won't be able to get news. The free version provides information only up to 30 days before.
 Therefore, if you use this version, enter the current date in the format you want.
 
-Run the attached GET request in Postman.
-You can change the date in Quarry but if you have the free version of 'News API' you won't be able to get news. The free version only provides information up to 30 days in advance.
-Therefore, if you use this version, you will enter the current date in the desired format
-
 ### the order of perform postman calls :
-The first time you run the request, the information will be retrieved from the external API because the DB is still empty.
-The second time run the request less than 10 minutes later, the information will be retrieved from the cache.
-The third time run the request after more than 10 minutes, the information will be pulled from the DB.
-When you run the request with a later date you can see that some of the information comes back from the DB and some from the external API. In case you run the current date due to the free version you will only be able to see it if you run at least a day after...
+* The first time you run the request, the information will be retrieved from the external API because the DB is still empty.
+* The second time run the request less than 10 minutes later, the information will be retrieved from the cache.
+* The third time run the request after more than 10 minutes, the information will be pulled from the DB.
+* When you run the request with a later date you can see that some of the information comes back from the DB and some from the external API. In case you run the current date due to the free version you will only be able to see it if you run at least a day after...
+
 (You can see the messages in the console).
